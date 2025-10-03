@@ -99,7 +99,7 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 217, 0, 0.7);
+    background: rgba(255, 217, 0, 0.8);
     z-index: 1;
 }
 
@@ -214,7 +214,6 @@ nav {
 }
 
 .service-card {
-    background: #FFD700;
     background: linear-gradient(120deg, #FFD700, #fbff00);
     padding: 2rem;
     border-radius: 15px;
