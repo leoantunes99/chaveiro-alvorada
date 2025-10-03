@@ -371,7 +371,7 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 217, 0, 0.7);
+    background: linear-gradient(120deg, #FFD700, #fbff00);
     /* amarelão transparente */
     z-index: 1;
 }
