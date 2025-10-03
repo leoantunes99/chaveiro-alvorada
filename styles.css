@@ -458,6 +458,11 @@ nav {
     color: #1a1a1a;
 }
 
+.span-link {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* ===== FOOTER ===== */
 footer {
     background: #1a1a1a;
@@ -490,6 +495,11 @@ footer {
     background: var(--white);
     color: var(--primary-color);
     transform: translateY(-3px);
+}
+
+.footer-link {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* ===== WHATSAPP BUTTON ===== */
