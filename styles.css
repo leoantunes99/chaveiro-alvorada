@@ -458,9 +458,11 @@ nav {
     color: #1a1a1a;
 }
 
-.span-link {
-    text-decoration: none;
-    color: inherit;
+a[href^="tel"], 
+p a[href^="tel"], 
+span a[href^="tel"] {
+  color: inherit !important;    
+  text-decoration: none !important;
 }
 
 /* ===== FOOTER ===== */
@@ -495,11 +497,6 @@ footer {
     background: var(--white);
     color: var(--primary-color);
     transform: translateY(-3px);
-}
-
-.footer-link {
-    text-decoration: none;
-    color: inherit;
 }
 
 /* ===== WHATSAPP BUTTON ===== */
