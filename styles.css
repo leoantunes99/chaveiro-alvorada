@@ -549,10 +549,6 @@ footer {
     transition-delay: 1.2s;
 }
 
-.service-card {
-    transition-delay: 0.1s;
-}
-
 .location-subtitle {
     transition-delay: 0.1s;
 }
@@ -569,12 +565,8 @@ footer {
     transition-delay: 0.4s;
 }
 
-.cta-subtitle {
-    transition-delay: 0.1s;
-}
-
 .cta-content {
-    transition-delay: 0.3s;
+    transition-delay: 0.2s;
 }
 
 /* ===== RESPONSIVIDADE MOBILE ===== */
