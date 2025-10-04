@@ -81,7 +81,6 @@ nav {
     text-align: center;
     overflow: hidden;
     color: #0C356A;
-    animation: fadeInUp 1s ease 0.4s;
 }
 
 /* Imagem de fundo com object-fit */
@@ -116,7 +115,6 @@ nav {
     background: #0C356A;
     -webkit-background-clip: text;
     color: transparent;
-    animation: fadeInUp 1s ease 0.5s;
 }
 
 .hero-content p {
@@ -125,7 +123,6 @@ nav {
     max-width: 60vw;
     line-height: 1.6;
     font-weight: bold;
-    animation: fadeInUp 1s ease 0.6s;
 }
 
 .cta-button {
@@ -133,14 +130,14 @@ nav {
     align-items: center;
     gap: 8px;
     background: #0C356A;
-    color: #ffc436;
+    color: #FFC436;
     padding: 18px 30px;
     border-radius: 30px;
     font-weight: bold;
     text-decoration: none;
-    transition: 0.3s ease;
-    animation: fadeInUp 1s ease 0.7s;
-    animation: pulse 1s infinite ease-in-out;
+    transition: all 0.3s ease;
+    animation: none;
+    box-shadow: none;
 }
 
 .cta-button:hover {
@@ -361,7 +358,6 @@ hr {
     overflow: hidden;
     background: #FFC436;
     text-align: center;
-    animation: fadeInUp 1s ease 0.5s;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.7);
 }
 
@@ -501,17 +497,6 @@ footer {
 }
 
 /* ===== ANIMAÇÕES ===== */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 @keyframes pulse {
     0% {
@@ -523,6 +508,73 @@ footer {
     100% {
         transform: scale(1);
     }
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 0.7s ease;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.hero-content h1 {
+    transition-delay: 0.1s;
+}
+
+.hero-content p {
+    transition-delay: 0.3s;
+}
+
+.hero-content .cta-button {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.6s ease;
+    transition-delay: 0.6s;
+}
+
+.show .cta-button {
+    opacity: 1;
+    transform: translateX(0);
+    animation: none;
+}
+
+.show .cta-button {
+    animation: pulse 2s infinite ease-in-out;
+    transition-delay: 1.2s;
+}
+
+.service-card {
+    transition-delay: 0.1s;
+}
+
+.location-subtitle {
+    transition-delay: 0.1s;
+}
+
+.location-opening {
+    transition-delay: 0.2s;
+}
+
+.location-hours {
+    transition-delay: 0.3s;
+}
+
+.map-container {
+    transition-delay: 0.4s;
+}
+
+.cta-subtitle {
+    transition-delay: 0.1s;
+}
+
+.cta-content {
+    transition-delay: 0.3s;
 }
 
 /* ===== RESPONSIVIDADE MOBILE ===== */
