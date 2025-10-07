@@ -14,13 +14,22 @@ body {
 
 /* ===== HEADER ===== */
 header {
-    background: #FFF0CE;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: transparent;
+    box-shadow: 40px 10px 10px rgba(0, 0, 0, 0.5);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
     opacity: 0.95;
+    transition: all 0.3s ease-in;
+}
+
+header:hover {
+    background: #FFC436;
+}
+
+header:active {
+    background: #FFC436;
 }
 
 nav {
@@ -49,7 +58,6 @@ nav {
 
 .logo:hover {
     color: #08254b;
-    ;
 }
 
 .nav-links {
@@ -598,10 +606,9 @@ footer {
     .nav-links {
         position: fixed;
         right: -100%;
-        top: 60px;
+        top: 70px;
         flex-direction: column;
-        background: #FFF0CE;
-        opacity: 0.95;
+        background: #FFC436;
         width: 100%;
         text-align: center;
         transition: 0.3s;
