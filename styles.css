@@ -14,22 +14,13 @@ body {
 
 /* ===== HEADER ===== */
 header {
-    background: transparent;
-    box-shadow: 40px 10px 10px rgba(0, 0, 0, 0.5);
+    background: #FFC436;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    opacity: 0.95;
     transition: all 0.3s ease-in;
-}
-
-header:hover {
-    background: #FFC436;
-}
-
-header:active {
-    background: #FFC436;
 }
 
 nav {
@@ -48,18 +39,6 @@ nav {
     top: 5px;
 }
 
-.logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #0C356A;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.logo:hover {
-    color: #08254b;
-}
-
 .nav-links {
     display: flex;
     list-style: none;
@@ -67,14 +46,31 @@ nav {
 }
 
 .nav-links a {
+    position: relative;
     text-decoration: none;
+    padding-bottom: 3px;
     color: #0C356A;
     font-weight: 500;
-    transition: color 0.3s;
+    transition: all 0.3s;
 }
 
 .nav-links a:hover {
     color: #08254b;
+}
+
+.nav-links a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 0%;
+    height: 3px;
+    background-color: #08254b;
+    transition: width .3s;
+}
+
+.nav-links a:hover::before {
+    width: 100%;
 }
 
 .menu-toggle {
