@@ -245,85 +245,49 @@ hr {
 
 /* ===== TESTIMONIALS ===== */
 
-#color-title {
+.testimonials-section {
+    background: #08254b;
+    padding: 8% 0;
+    box-shadow: inset 0px -10px 30px rgba(0, 0, 0, 0.7);
+}
+
+.swiper {
+    height: 250px;
+    padding: 0 20px;
+}
+
+.testimonials-title {
+    margin-bottom: 4rem;
+}
+
+.swiper-slide {
+    background: #FFF0CE;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: left;
+    position: relative;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.testimonials-rate,
+.testimonials-title {
     color: #FFC436;
 }
 
-.stars {
-    color: #ffc436;
-    /* dourado */
-    font-size: 1rem;
-    margin-bottom: 1rem;
+.testimonials-quote,
+.testimonials-author {
+    color: #08254b;
 }
 
-.testimonials {
-    position: relative;
-    padding: 60px 5% 80px;
-    /* mais espaço para as bolinhas */
-    overflow: hidden;
-    background: #0C356A;
-    box-shadow: inset 0px 10px 30px rgba(0, 0, 0, 0.7);
+.testimonials-author {
+    font-style: italic;
 }
 
-.testimonials-carousel {
-    display: flex;
-    transition: transform 0.6s ease;
-    will-change: transform;
-    cursor: grab;
-    gap: 2rem;
-    /* espaçamento entre cards */
-}
-
-.testimonials-carousel.dragging {
-    transition: none;
-    cursor: grabbing;
-}
-
-.testimonial-card {
-    flex: 0 0 70%;
-    /* menor no mobile */
-    margin: 0 auto;
-    background: #FFF0CE;
-    padding: 1.8rem;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-    text-align: start;
-    transition: transform 0.3s ease;
-}
-
-.testimonial-card:hover {
-    transform: scale(1.05);
-}
-
-.testimonial-text {
-    margin: 30px 0 10px;
-    color: #0C356A;
-}
-
-.testimonial-author {
-    color: #0C356A;
-}
-
-/* Indicadores de bolinhas */
-.carousel-indicators {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 2rem;
-}
-
-.carousel-indicators .dot {
-    width: 12px;
-    height: 12px;
-    background: #FFF0CE;
-    border-radius: 50%;
-    transition: background 0.3s ease, transform 0.3s ease;
-    cursor: pointer;
-}
-
-.carousel-indicators .dot.active {
-    background: #FFC436;
-    transform: scale(1.2);
+.swiper-pagination-bullet-active {
+    background-color: #FFC436;
 }
 
 /* ===== LOCATION SECTION ===== */

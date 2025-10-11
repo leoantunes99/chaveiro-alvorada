@@ -144,147 +144,35 @@ document.head.appendChild(style);
 
 // ===== TESTIMONIALS CAROUSEL DRAG =====
 
-const carousel = document.querySelector('.testimonials-carousel');
-let cards = Array.from(carousel.children);
-let index = 1; // começa no 1 porque vamos clonar
-let cardWidth;
+const swiper = new Swiper('.swiper', {
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
 
-// ===== Clonar os primeiros e últimos cards =====
-const firstClone = cards[0].cloneNode(true);
-const lastClone = cards[cards.length - 1].cloneNode(true);
-firstClone.classList.add("clone");
-lastClone.classList.add("clone");
+  slidesPerView: 1,
+  spaceBetween: 20,
 
-carousel.appendChild(firstClone);
-carousel.insertBefore(lastClone, cards[0]);
+  loop: true,
+  grabCursor: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
 
-// Atualiza lista de cards
-cards = Array.from(carousel.children);
-
-// ===== Indicadores =====
-const indicatorsContainer = document.querySelector('.carousel-indicators');
-indicatorsContainer.innerHTML = "";
-cards.slice(1, -1).forEach((_, i) => {
-  const dot = document.createElement('span');
-  dot.classList.add('dot');
-  if (i === 0) dot.classList.add('active');
-  dot.addEventListener('click', () => {
-    index = i + 1; // +1 por causa do clone inicial
-    updateCarousel();
-    updateIndicators();
-    restartAutoplay();
-  });
-  indicatorsContainer.appendChild(dot);
-});
-const dots = document.querySelectorAll('.dot');
-
-// ===== Atualizar carrossel =====
-function updateCarousel(animate = true) {
-  cardWidth = cards[0].offsetWidth + 28; // largura do card + gap
-  const containerWidth = carousel.offsetWidth;
-  const offset = (containerWidth - cardWidth) / 2; // centralizar
-
-  if (!animate) {
-    carousel.style.transition = "none";
-  } else {
-    carousel.style.transition = "transform 0.6s ease";
-  }
-
-  carousel.style.transform = `translateX(${-index * cardWidth + offset}px)`;
-}
-
-// ===== Atualizar bolinhas =====
-function updateIndicators() {
-  dots.forEach((dot, i) => {
-    dot.classList.toggle("active", i === index - 1); // -1 por causa do clone
-  });
-}
-
-// ===== Autoplay =====
-let autoplayInterval;
-function startAutoplay() {
-  autoplayInterval = setInterval(() => {
-    index++;
-    updateCarousel();
-    updateIndicators();
-  }, 4000);
-}
-function stopAutoplay() { clearInterval(autoplayInterval); }
-function restartAutoplay() { stopAutoplay(); startAutoplay(); }
-startAutoplay();
-
-// ===== Loop infinito =====
-carousel.addEventListener("transitionend", () => {
-  if (cards[index].classList.contains("clone")) {
-    if (index === cards.length - 1) {
-      index = 1; // pulou pro clone do primeiro → volta pro real
-    } else if (index === 0) {
-      index = cards.length - 2; // pulou pro clone do último → volta pro real
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 20
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30
+    },
+    1188: {
+      slidesPerView: 3,
+      spaceBetween: 40
     }
-    updateCarousel(false); // sem animação
-    updateIndicators();
   }
 });
-
-// ===== Drag & Touch =====
-let isDown = false, startX, moveX;
-
-function handleMove(diff) {
-  if (diff < -50) index++;
-  if (diff > 50) index--;
-  updateCarousel();
-  updateIndicators();
-  restartAutoplay();
-}
-
-carousel.addEventListener("mousedown", (e) => {
-  isDown = true;
-  startX = e.pageX;
-  carousel.classList.add("dragging");
-  stopAutoplay();
-});
-
-carousel.addEventListener("mouseup", (e) => {
-  if (!isDown) return;
-  isDown = false;
-  carousel.classList.remove("dragging");
-  moveX = e.pageX - startX;
-  handleMove(moveX);
-});
-
-carousel.addEventListener("mousemove", (e) => {
-  if (!isDown) return;
-  const walk = e.pageX - startX;
-  carousel.style.transition = "none";
-  carousel.style.transform = `translateX(${-index * cardWidth + walk}px)`;
-});
-
-carousel.addEventListener("mouseleave", () => { isDown = false; });
-
-carousel.addEventListener("touchstart", (e) => {
-  isDown = true;
-  startX = e.touches[0].pageX;
-  carousel.classList.add("dragging");
-  stopAutoplay();
-});
-
-carousel.addEventListener("touchend", (e) => {
-  if (!isDown) return;
-  isDown = false;
-  carousel.classList.remove("dragging");
-  moveX = e.changedTouches[0].pageX - startX;
-  handleMove(moveX);
-});
-
-carousel.addEventListener("touchmove", (e) => {
-  if (!isDown) return;
-  const walk = e.touches[0].pageX - startX;
-  carousel.style.transition = "none";
-  carousel.style.transform = `translateX(${-index * cardWidth + walk}px)`;
-});
-
-// ===== Recalcular no resize =====
-window.addEventListener("resize", () => updateCarousel(false));
-
-// ===== Inicia centralizado =====
-updateCarousel(false);

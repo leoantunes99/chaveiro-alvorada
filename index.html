@@ -19,6 +19,9 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+    <!-- Swiper JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -109,84 +112,100 @@
 </div>
     <!-- TESTIMONIALS SECTION -->
 
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <h2 class="section-title" id="color-title">O Que Meus Clientes Dizem</h2>
+    <section class="testimonials-section" id="testimonials">
+        <h2 class="section-title testimonials-title">O Que Meus Clientes Dizem</h2>
+        <div class="swiper">
 
-            <div class="testimonials-carousel">
-                <!-- Avaliação 4.0 -->
-                <div class="testimonial-card hidden">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="testimonials-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
                     </div>
-                    <p class="testimonial-text">"Atendimento rápido e atencioso. Chegou na madrugada e resolveu tudo sem
-                        enrolação."</p>
-                    <p class="testimonial-author"><i>- Maria Silva</i></p>
+
+                    <blockquote class="testimonials-quote">
+                        "Atendimento rápido e atencioso. Chegou na madrugada e resolveu tudo sem enrolação."
+                    </blockquote>
+
+                    <div class="testimonials-author">
+                        <p>- Maria Silva</p>
+                    </div>
                 </div>
-
-                <!-- Avaliação 4.5 -->
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
+                <div class="swiper-slide">
+                    <div class="testimonials-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
                     </div>
-                    <p class="testimonial-text">"Orçamento claro, serviço honesto e entrega dentro do combinado. Fiquei
-                        muito satisfeito."</p>
-                    <p class="testimonial-author"><i>- Gabriel Pereira</i></p>
+
+                    <blockquote class="testimonials-quote">
+                        "Orçamento claro, serviço honesto e entrega dentro do combinado. Fiquei muitos satisfeito."
+                    </blockquote>
+
+                    <div class="testimonials-author">
+                        <p>- Gabriel Pereira</p>
+                    </div>
                 </div>
-
-                <!-- Avaliação 5.0 -->
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                <div class="swiper-slide">
+                    <div class="testimonials-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
                     </div>
-                    <p class="testimonial-text">"Profissional cuidadoso com a porta da casa e com o carro. Serviço
-                        eficiente."</p>
-                    <p class="testimonial-author"><i>- André Costa</i></p>
+
+                    <blockquote class="testimonials-quote">
+                        "Profissional cuidadoso com a porta de casa e com meu carro. Serviço eficiente."
+                    </blockquote>
+
+                    <div class="testimonials-author">
+                        <p>- André Costa</p>
+                    </div>
                 </div>
-
-                <!-- Avaliação 4.5 -->
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
+                <div class="swiper-slide">
+                    <div class="testimonials-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
                     </div>
-                    <p class="testimonial-text">"Resolveu tudo em poucos minutos, preço justo e muito educado. Recomendo
-                        demais!"</p>
-                    <p class="testimonial-author"><i>- Fernanda Lopes</i></p>
+
+                    <blockquote class="testimonials-quote">
+                        "Resolveu tudo em poucos minutos, preço justo e muito educado. Recomendo muito!"
+                    </blockquote>
+
+                    <div class="testimonials-author">
+                        <p>- Fernanda Lopes</p>
+                    </div>
                 </div>
-
-                <!-- Avaliação 5.0 -->
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                <div class="swiper-slide">
+                    <div class="testimonials-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
                     </div>
-                    <p class="testimonial-text">"Chaveiro de confiança! Já usei mais de uma vez e sempre foi excelente."
-                    </p>
-                    <p class="testimonial-author"><i>- Ricardo Almeida</i></p>
+
+                    <blockquote class="testimonials-quote">
+                        "Chaveiro de confiança! Já contatei mais de uma vez e sempre foi excelente."
+                    </blockquote>
+
+                    <div class="testimonials-author">
+                        <p>- Ricardo Almeida</p>
+                    </div>
                 </div>
             </div>
 
-            <!-- Indicadores -->
-            <div class="carousel-indicators"></div>
+            <div class="swiper-pagination"></div>
+
         </div>
     </section>
 
@@ -245,6 +264,9 @@
     <a href="https://wa.me/5511988791369?text=Olá, preciso do seu serviço!" class="whatsapp-float" target="_blank">
         <i class='bx bxl-whatsapp'></i>
     </a>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
     <!-- JavaScript -->
     <script src="script.js"></script>
