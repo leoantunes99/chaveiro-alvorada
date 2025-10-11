@@ -206,7 +206,7 @@ hr {
 }
 
 .service-card:hover {
-    box-shadow: 0 10px 10px rgba(255, 187, 0, 0.877);
+    box-shadow: none;
     border: 1px solid #0C356A;
 }
 
@@ -246,7 +246,7 @@ hr {
 /* ===== TESTIMONIALS ===== */
 
 .testimonials-section {
-    background: #08254b;
+    background: #0C356A;
     padding: 8% 0;
     box-shadow: inset 0px 10px 30px rgba(0, 0, 0, 0.7);
 }
@@ -279,7 +279,7 @@ hr {
 
 .testimonials-quote,
 .testimonials-author {
-    color: #08254b;
+    color: #0C356A;
 }
 
 .testimonials-author {
@@ -385,7 +385,6 @@ hr {
 
 .whatsapp-button:hover {
     background: #128c7e;
-    transform: translateY(-3px);
     box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
     animation: none;
 }
