@@ -325,7 +325,7 @@ hr {
     justify-content: center;
     align-self: center;
     margin: 0 auto;
-    max-width: 600px;
+    max-width: 90%;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
