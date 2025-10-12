@@ -148,9 +148,9 @@ nav {
     border-radius: 30px;
     font-weight: bold;
     text-decoration: none;
-    transition: all 0.3s ease;
+    /* transition: all 0.3s ease;
     animation: none;
-    box-shadow: none;
+    box-shadow: none; */
 }
 
 /* ===== SERVICES SECTION ===== */

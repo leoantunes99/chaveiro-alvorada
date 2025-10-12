@@ -122,26 +122,6 @@ setInterval(() => {
   }, 1000);
 }, 4000);
 
-// ===== ADICIONAR ANIMAÇÕES CSS DINAMICAMENTE =====
-const style = document.createElement('style');
-style.innerHTML = `
-    @keyframes pulse {
-        0% {
-            transform: scale(1);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-        }
-        50% {
-            transform: scale(1.1);
-            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
-        }
-        100% {
-            transform: scale(1);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-        }
-    }
-`;
-document.head.appendChild(style);
-
 // ===== TESTIMONIALS CAROUSEL DRAG =====
 
 const swiper = new Swiper('.swiper', {
