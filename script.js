@@ -1,18 +1,9 @@
-// ===== SCROLL ANIMATION =====
-const myObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-        }
-    });
-});
-
-const hiddenElements = document.querySelectorAll('.hidden');
-hiddenElements.forEach((el) => myObserver.observe(el));
+// Seletores
+const navLinks = document.querySelector(".nav-links");
+const menuToggle = document.querySelector('.menu-toggle');
+const header = document.querySelector('header');
 
 // ===== MENU MOBILE TOGGLE =====
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
 
 menuToggle.addEventListener('click', () => {
   navLinks.classList.toggle('active');
@@ -56,48 +47,57 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// ===== ANIMAÇÃO ON SCROLL =====
+// ===== ANIMAÇÃO SCROLL =====
+
 const observerOptions = {
   threshold: 0.1,
-  rootMargin: "0px 0px -100px 0px"
+  rootMargin: '0px 0px -50px 0px'
 };
 
-const observer = new IntersectionObserver(function (entries) {
+const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      // Adicionar animação fade in
-      entry.target.style.opacity = "0";
-      entry.target.style.transform = "translateY(30px)";
-
-      setTimeout(() => {
-        entry.target.style.transition = "all 0.6s ease";
-        entry.target.style.opacity = "1";
-        entry.target.style.transform = "translateY(0)";
-      }, 100);
-
-      // Parar de observar após animar
-      observer.unobserve(entry.target);
+      entry.target.classList.add('animate-in');
     }
   });
 }, observerOptions);
 
-// Observar todos os cards e botões
-document.querySelectorAll('.service-card, .testimonial-card, .whatsapp-button').forEach(element => {
-  observer.observe(element);
+// Observar todos os elementos que devem ser animados
+document.querySelectorAll('.service-card, .swiper-slide, .section-title, .location-content, .cta-content-wrapper').forEach(el => {
+  el.classList.add('fade-element');
+  observer.observe(el);
+});
+
+// ===== ANIMAÇÃO HERO (ao carregar página) =====
+window.addEventListener('load', () => {
+  const heroLogo = document.querySelector('.hero-logo');
+  const heroTitle = document.querySelector('.hero-title');
+  const heroButton = document.querySelector('.cta-button');
+
+  setTimeout(() => {
+    heroLogo.classList.add('hero-animate');
+  }, 100);
+  
+  setTimeout(() => {
+    heroTitle.classList.add('hero-animate');
+  }, 300);
+  
+  setTimeout(() => {
+    heroButton.classList.add('hero-animate');
+  }, 500);  
 });
 
 // ===== HEADER SCROLL EFFECT =====
 let lastScroll = 0;
-const header = document.querySelector('header');
 
 window.addEventListener('scroll', () => {
   const currentScroll = window.pageYOffset;
 
   // Adicionar sombra quando scrollar
   if (currentScroll > 50) {
-    header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+    header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.5)';
   } else {
-    header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+    header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.5)';
   }
 
   // Esconder/mostrar header baseado na direção do scroll (opcional)
@@ -120,19 +120,15 @@ setInterval(() => {
   setTimeout(() => {
     whatsappFloat.style.animation = '';
   }, 1000);
-}, 4000);
+}, 2000);
 
 // ===== TESTIMONIALS CAROUSEL DRAG =====
 
 const swiper = new Swiper('.swiper', {
   autoplay: {
-    delay: 2000,
+    delay: 5000,
     disableOnInteraction: false,
   },
-
-  slidesPerView: 1,
-  spaceBetween: 20,
-
   loop: true,
   grabCursor: true,
   pagination: {
@@ -142,17 +138,23 @@ const swiper = new Swiper('.swiper', {
   },
 
   breakpoints: {
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      centeredSlides: true,
+    },
     640: {
       slidesPerView: 1,
-      spaceBetween: 20
+      spaceBetween: 20,
+      centeredSlides: true,
     },
     768: {
       slidesPerView: 2,
-      spaceBetween: 30
+      spaceBetween: 20
     },
     1188: {
       slidesPerView: 3,
-      spaceBetween: 40
+      spaceBetween: 20
     }
   }
 });

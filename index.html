@@ -4,8 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chaveiro 24 Horas em Mongaguá. Atendimento rápido para abertura de portas, autos, cofres, cópias de chaves e chaves codificadas. Melhores preços e serviço de qualidade.">
+    <meta name="keywords" content="chaveiro 24 horas, chaveiro alvorada, chaveiro mongaguá, abertura de portas, chaves codificadas, cópia de chaves, chaveiro de carro">
     <meta name="format-detection" content="telephone=no">
     <title>Chaveiro Alvorada</title>
+
+    <!-- Swiper JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,23 +19,22 @@
 
     <!-- Boxicons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <!-- Swiper JS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-
     <!-- CSS -->
+    <link rel="preload" href="styles.css" as="style">
     <link rel="stylesheet" href="styles.css">
+
 </head>
 
 <body>
     <!-- Header -->
     <header>
-        <nav>
-            <a href="#home" class="logo"><img src="/assets/logo-header.png" alt="logo-header"></a>
+        <nav role="navigation" aria-label="Menu Principal">
+            <a href="#home" class="logo">
+                <img src="/assets/logo-header.png" alt="Logotipo Chaveiro Alvorada - Volta ao Início" height="50" width="auto">
+            </a>
             <ul class="nav-links">
                 <li><a href="#home">Início</a></li>
                 <li><a href="#services">Serviços</a></li>
@@ -38,238 +42,232 @@
                 <li><a href="#location">Localização</a></li>
                 <li><a href="#contact">Contato</a></li>
             </ul>
-            <div class="menu-toggle">
+            <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links">
                 <i class='bx bx-menu'></i>
-            </div>
+            </button>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-<div class="background-hero-services">
-        <img src="/assets/hero-image.png" alt="chaveiro-alvorada" class="hero-bg">
-    <section class="hero" id="home">
-        <div class="hero-content hidden">
-            <img src="/assets/logo.png" alt="logotipo" class="hero-logo hidden">
-            <p class="hidden">Se trancou para fora de casa ou perdeu as chaves?<br>
-                Estou disponível 24 horas por dia, com atendimento rápido e ótimos valores!</p>
-            <a href="#contact" class="cta-button">
-                <i class="fa-solid fa-share"></i> Atendimento 24 horas
-            </a>
-        </div>
-    </section>
+    <main>
+        <!-- Hero Section -->
+        <div class="background-hero-services">
+            <section class="hero" id="home">
+                <img src="/assets/hero-image.png" alt="Plano de fundo ilustrando algumas chaves." class="hero-bg">
+                <div class="hero-content">
+                    <img src="/assets/logo.png" alt="Logotipo Chaveiro Alvorada" class="hero-logo" loading="eager">
+                    <h1 class="hero-title">
+                        Se trancou para fora de casa ou perdeu as chaves?<br>
+                        Estou disponível 24 horas por dia, com atendimento rápido e ótimos valores!
+                    </h1>
+                    <a href="#contact" class="cta-button">
+                        <i class="fa-solid fa-share"></i> Atendimento 24 horas
+                    </a>
+                </div>
+            </section>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="container">
-            <hr>
-            <h2 class="section-title" id="section-title-bug">Meus Serviços</h2>
-            <div class="services-grid">
-                <div class="service-card hidden">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-key"></i>
+            <!-- Services Section -->
+            <section class="services" id="services" aria-labelledby="servicos-titulo">
+                <div class="container">
+                    <hr>
+                    <h2 class="section-title" id="servicos-titulo">Meus Serviços</h2>
+                    <div class="services-grid">
+                        <article class="service-card" aria-label="Serviço: Cópias de Chaves em Geral">
+                            <div class="service-icon">
+                                <i class="fa-solid fa-key"></i>
+                            </div>
+                            <h3>Cópias de Chaves em Geral</h3>
+                            <p>Cópias rápidas e precisas, com material de primeira linha e garantia de compatibilidade 100%.</p>
+                        </article>
+                        <article class="service-card" aria-label="Serviço: Abertura de Autos, Residências e Cofres">
+                            <div class="service-icon">
+                                <i class="fa-solid fa-lock-open"></i>
+                            </div>
+                            <h3>Abertura de Autos, <br> Residências e Cofres</h3>
+                            <p>Aberturas seguras e sem danos utilizando técnicas profissionais com garantia de acesso rápido e eficiente.</p>
+                        </article>
+                        <article class="service-card" aria-label="Serviço: Instalação de Fechaduras e Travas de Segurança">
+                            <div class="service-icon">
+                                <i class="fa-solid fa-house-lock"></i>
+                            </div>
+                            <h3>Instalação de Fechaduras e <br>Travas de Segurança</h3>
+                            <p>Soluções duráveis que aumentam a proteção do seu imóvel.</p>
+                        </article>
+                        <article class="service-card" aria-label="Serviço: Chaves Codificadas e Telecomandos Automotivos">
+                            <div class="service-icon">
+                                <i class="fa-solid fa-fingerprint"></i>
+                            </div>
+                            <h3>Chaves Codificadas e <br>Telecomandos Automotivos</h3>
+                            <p>Confecção e programação de chaves codificadas e telecomandos automotivos com garantia.</p>
+                        </article>
+                        <article class="service-card" aria-label="Serviço: Chaves Automotivas com Corte em Máquina Automática">
+                            <div class="service-icon">
+                                <i class="fa-solid fa-car-side"></i>
+                            </div>
+                            <h3>Chaves Automotivas com Corte em Máquina Automática</h3>
+                            <p>Corte de chaves automotivas com tecnologia de alta precisão, garantindo funcionamento e encaixe perfeito no seu veículo.</p>
+                        </article>
+                        <article class="service-card" aria-label="Serviço: Cópias de Chaves para Veículos Antigos">
+                            <div class="service-icon">
+                                <i class="bx bx-key key-icon"></i>
+                            </div>
+                            <h3 class="key-title">Cópias de Chaves para Veículos Antigos</h3>
+                            <p class="key-text">Reprodução fiel de chaves para modelos antigos, preservando o padrão original e garantindo total compatibilidade e qualidade.</p>
+                        </article>
                     </div>
-                    <h3>Cópias de Chaves em Geral</h3>
-                    <p>Cópias rápidas e precisas, com material de primeira linha e garantia de compatibilidade 100%.</p>
                 </div>
-                <div class="service-card hidden">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-lock-open"></i>
-                    </div>
-                    <h3>Abertura de Autos, <br> Residências e Cofres</h3>
-                    <p>Aberturas seguras e sem danos utilizando ténicas profissionais com garantia de acesso rápido e eficiente.</p>
+            </section>
+        </div>
+        
+        <!-- Testimonials Section -->
+        <section class="testimonials-section" id="testimonials" aria-labelledby="depoimentos-titulo">
+            <h2 class="section-title testimonials-title" id="depoimentos-titulo">O Que Meus Clientes Dizem</h2>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <article class="swiper-slide" aria-label="Depoimento de Maria Silva">
+                        <div class="testimonials-rate" role="img" aria-label="Avaliação de 5 estrelas">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <blockquote class="testimonials-quote">
+                            <p>"Atendimento rápido e atencioso. Chegou na madrugada e resolveu tudo sem enrolação."</p>
+                        </blockquote>
+                        <div class="testimonials-author">
+                            <p>- Maria Silva</p>
+                        </div>
+                    </article>
+                    <article class="swiper-slide" aria-label="Depoimento de Gabriel Pereira">
+                        <div class="testimonials-rate" role="img" aria-label="Avaliação de 5 estrelas">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <blockquote class="testimonials-quote">
+                            <p>"Orçamento claro, serviço honesto e entrega dentro do combinado. Fiquei muitos satisfeito."</p>
+                        </blockquote>
+                        <div class="testimonials-author">
+                            <p>- Gabriel Pereira</p>
+                        </div>
+                    </article>
+                    <article class="swiper-slide" aria-label="Depoimento de André Costa">
+                        <div class="testimonials-rate" role="img" aria-label="Avaliação de 5 estrelas">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <blockquote class="testimonials-quote">
+                            <p>"Profissional cuidadoso com a porta de casa e com meu carro. Serviço eficiente."</p>
+                        </blockquote>
+                        <div class="testimonials-author">
+                            <p>- André Costa</p>
+                        </div>
+                    </article>
+                    <article class="swiper-slide" aria-label="Depoimento de Fernanda Lopes">
+                        <div class="testimonials-rate" role="img" aria-label="Avaliação de 5 estrelas">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <blockquote class="testimonials-quote">
+                            <p>"Resolveu tudo em poucos minutos, preço justo e muito educado. Recomendo muito!"</p>
+                        </blockquote>
+                        <div class="testimonials-author">
+                            <p>- Fernanda Lopes</p>
+                        </div>
+                    </article>
+                    <article class="swiper-slide" aria-label="Depoimento de Ricardo Almeida">
+                        <div class="testimonials-rate" role="img" aria-label="Avaliação de 5 estrelas">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <blockquote class="testimonials-quote">
+                            <p>"Chaveiro de confiança! Já contatei mais de uma vez e sempre foi excelente."</p>
+                        </blockquote>
+                        <div class="testimonials-author">
+                            <p>- Ricardo Almeida</p>
+                        </div>
+                    </article>
                 </div>
-                <div class="service-card hidden">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-house-lock"></i>
-                    </div>
-                    <h3>Instalação de Fechaduras e <br>Travas de Segurança</h3>
-                    <p>Soluções duráveis que aumentam a proteção do seu imóvel.</p>
-                </div>
-                <div class="service-card hidden">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-fingerprint"></i>
-                    </div>
-                    <h3>Chaves Codificadas e <br>Telecomandos Automotivos</h3>
-                    <p>Confecção e programação de chaves codificadas e telecomandos automotivos com garantia.</p>
-                </div>
-                <div class="service-card hidden">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-car-side"></i>
-                    </div>
-                    <h3>Chaves Automotivas com Corte em Máquina Automática</h3>
-                    <p>Corte de chaves automotivas com tecnologia de alta precisão, garantindo funcionamento e encaixe perfeito no seu veículo.</p>
-                </div>
-                <div class="service-card hidden">
-                    <div class="service-icon">
-                        <i class="bx bx-key key-icon"></i> 
-                    </div>
-                    <h3 class="key-title">Cópias de Chaves para Veículos Antigos</h3>
-                    <p class="key-text">Reprodução fiel de chaves para modelos antigos, preservando o padrão original e garantindo total compatibilidade e qualidade.</p>
-                </div>
+                <div class="swiper-pagination"></div>
             </div>
-        </div>
-    </section>
-</div>
-    <!-- TESTIMONIALS SECTION -->
+        </section>
 
-    <section class="testimonials-section" id="testimonials">
-        <h2 class="section-title testimonials-title">O Que Meus Clientes Dizem</h2>
-        <div class="swiper">
-
-            <div class="swiper-wrapper hidden">
-                <div class="swiper-slide">
-                    <div class="testimonials-rate">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-
-                    <blockquote class="testimonials-quote">
-                        "Atendimento rápido e atencioso. Chegou na madrugada e resolveu tudo sem enrolação."
-                    </blockquote>
-
-                    <div class="testimonials-author">
-                        <p>- Maria Silva</p>
-                    </div>
+        <!-- Location Section -->
+        <section class="location-section" id="location" aria-labelledby="localizacao-titulo">
+            <div class="location-content">
+                <h2 class="section-title location-title" id="localizacao-titulo">Localização</h2>
+                <address class="location-subtitle">
+                    <i class="fa-solid fa-location-dot"></i> Av. Monteiro Lobato, 7456 - Mongaguá
+                </address>
+                <p class="location-opening">Horário de Funcionamento da Loja Física:</p>
+                <p class="location-hours">Segunda à Sexta | 8h às 17h <br> Sábado | 8h às 12h</p>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.835434507378!2d-46.59887868445654!3d-24.034648984392736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a5e8f7b8b7b%3A0x8c9e4e8e4e8e4e8e!2sAv.%20Monteiro%20Lobato%2C%207456%20-%20Mongagu%C3%A1%20-%20SP%2C%2011780-000%2C%20Brasil!5e0!3m2!1spt-BR!2sus!4v1701367890123!5m2!1spt-BR!2sus"
+                        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" title="Localização do Chaveiro Alvorada no mapa de Mongaguá">
+                    </iframe>
                 </div>
-                <div class="swiper-slide">
-                    <div class="testimonials-rate">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-
-                    <blockquote class="testimonials-quote">
-                        "Orçamento claro, serviço honesto e entrega dentro do combinado. Fiquei muitos satisfeito."
-                    </blockquote>
-
-                    <div class="testimonials-author">
-                        <p>- Gabriel Pereira</p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="testimonials-rate">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-
-                    <blockquote class="testimonials-quote">
-                        "Profissional cuidadoso com a porta de casa e com meu carro. Serviço eficiente."
-                    </blockquote>
-
-                    <div class="testimonials-author">
-                        <p>- André Costa</p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="testimonials-rate">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-
-                    <blockquote class="testimonials-quote">
-                        "Resolveu tudo em poucos minutos, preço justo e muito educado. Recomendo muito!"
-                    </blockquote>
-
-                    <div class="testimonials-author">
-                        <p>- Fernanda Lopes</p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="testimonials-rate">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-
-                    <blockquote class="testimonials-quote">
-                        "Chaveiro de confiança! Já contatei mais de uma vez e sempre foi excelente."
-                    </blockquote>
-
-                    <div class="testimonials-author">
-                        <p>- Ricardo Almeida</p>
-                    </div>
-                </div>
+                <p class="location-text">Serviço rápido e eficiente,<br> com atendimento 24 horas!</p>
             </div>
+        </section>
 
-            <div class="swiper-pagination"></div>
-
-        </div>
-    </section>
-
-    <!-- Location Section -->
-
-    <section class="location-section" id="location">
-        <div class="location-content">
-            <h2 class="section-title location-title">Localização</h2>
-            <p class="location-subtitle hidden"><i class="fa-solid fa-location-dot"></i>  Av. Monteiro Lobato, 7456 - Mongaguá</p>
-            <p class="location-opening hidden">Horário de Funcionamento da Loja Física:</p>
-            <p class="location-hours hidden">Segunda à Sexta | 8h às 17h <br> Sábado | 8h às 12h</p>
-            <div class="map-container hidden">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.835434507378!2d-46.59887868445654!3d-24.034648984392736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a5e8f7b8b7b%3A0x8c9e4e8e4e8e4e8e!2sAv.%20Monteiro%20Lobato%2C%207456%20-%20Mongagu%C3%A1%20-%20SP%2C%2011780-000%2C%20Brasil!5e0!3m2!1spt-BR!2sus!4v1701367890123!5m2!1spt-BR!2sus"
-                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            <p class="location-text">Serviço rápido e eficiente,<br> com atendimento 24 horas!</p>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section" id="contact">
-        <div class="overlay"></div>
-        <div class="cta-content-wrapper">
-            <hr>
-            <h2 class="section-title cta-title">Em que posso ajudar?</h2>
-            <p class="cta-subtitle hidden">Clique no botão abaixo e fale diretamente comigo pelo WhatsApp!</p>
-            <div class="cta-content hidden">
-                <a href="https://wa.me/5511988791369?text=Olá, preciso do seu serviço!" class="whatsapp-button" target="_blank">
-                    <i class='bx bxl-whatsapp'></i> Chamar no WhatsApp
-                </a>
-                <div class="contact-info">
-                    <div class="info-item hidden">
-                        <i class='bx bx-time'></i>
-                        <span>24h de Atendimento</span>
-                    </div>
-                    <div class="info-item hidden">
-                        <i class='bx bx-phone'></i>
-                        <span class="span-link">(11) 98879-1369</span>
+        <!-- CTA Section -->
+        <section class="cta-section" id="contact" aria-labelledby="cta-titulo">
+            <div class="overlay"></div>
+            <div class="cta-content-wrapper">
+                <hr>
+                <h2 class="section-title cta-title" id="cta-titulo">Em que posso ajudar?</h2>
+                <p class="cta-subtitle">Clique no botão abaixo e fale diretamente comigo pelo WhatsApp!</p>
+                <div class="cta-content">
+                    <a href="https://wa.me/5511988791369?text=Olá, preciso do seu serviço!" class="whatsapp-button" target="_blank">
+                        <i class='bx bxl-whatsapp'></i> Chamar no WhatsApp
+                    </a>
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <i class='bx bx-time'></i>
+                            <span>24h de Atendimento</span>
+                        </div>
+                        <div class="info-item">
+                            <i class='bx bx-phone'></i>
+                            <span class="span-link">(11) 98879-1369</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer>
-        <p class="footer-link">Av. Monteiro Lobato, 7456 - Mongaguá | (11) 98879-1369</p>
-        <p>Segunda à Sexta - 8h às 17h | Sábado - 8h às 12h</p>
-        <br>
-        <p>&copy; 2025 Chaveiro Alvorada. Todos os direitos reservados.</p>
-    </footer>
+        <!-- Footer -->
+        <footer>
+            <address>
+                <p class="footer-link">Av. Monteiro Lobato, 7456 - Mongaguá | <a href="tel:+5511988791369">(11) 98879-1369</a></p>
+            </address>
+            <p>Segunda à Sexta - 8h às 17h | Sábado - 8h às 12h</p>
+            <br>
+            <p>&copy; 2025 Chaveiro Alvorada. Todos os direitos reservados.</p>
+        </footer>
 
-    <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/5511988791369?text=Olá, preciso do seu serviço!" class="whatsapp-float" target="_blank">
-        <i class='bx bxl-whatsapp'></i>
-    </a>
+        <!-- WhatsApp Float Button -->
+        <a href="https://wa.me/5511988791369?text=Olá, preciso do seu serviço!" class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp - 24 horas">
+            <i class='bx bxl-whatsapp'></i>
+        </a>
 
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
-    <!-- JavaScript -->
-    <script src="script.js"></script>
+        <!-- JavaScript -->
+        <script src="script.js"></script>
 </body>
 
 </html>
