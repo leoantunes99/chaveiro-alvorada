@@ -93,9 +93,7 @@ ou utilize uma extensão como Live Server no VS Code.
 
 <div align="center">
   <h3>📱 Mobile</h3>
-  <img src="https://github.com/leoantunes99/chaveiro-alvorada/blob/main/assets/mobile1.png?raw=true" width="300"/>
-  <img src="https://github.com/leoantunes99/chaveiro-alvorada/blob/main/assets/mobile2.png?raw=true" width="300"/>
-  <img src="https://github.com/leoantunes99/chaveiro-alvorada/blob/main/assets/mobile3.png?raw=true" width="300"/>
+  <img src="https://github.com/leoantunes99/chaveiro-alvorada/blob/main/assets/mobile1.png?raw=true"/>
 </div>
 
 ---
